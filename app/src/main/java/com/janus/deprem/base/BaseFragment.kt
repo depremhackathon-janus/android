@@ -51,8 +51,11 @@ abstract class BaseFragment<VM : ViewModel, DB : ViewDataBinding> : DaggerFragme
                 return super.onPreBind(binding)
             }
         })
+        onBindingCreated()
         return binding.root
     }
+
+    open fun onBindingCreated() = Unit
 
     fun loadFragment(contanerId: Int, fragment: Fragment, fm: FragmentManager?, addToBackStack: Boolean) {
         val ft = fm?.beginTransaction()

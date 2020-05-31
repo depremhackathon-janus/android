@@ -6,6 +6,7 @@ import com.janus.deprem.base.ViewModelFactory
 import com.janus.deprem.di.mapkey.ViewModelKey
 import com.janus.deprem.vm.ChooseVM
 import com.janus.deprem.vm.CurrentStatusVM
+import com.janus.deprem.vm.UpdateStatusVM
 import dagger.Binds
 import dagger.Module
 import dagger.multibindings.IntoMap
@@ -22,6 +23,11 @@ abstract class ViewModelModule {
     @IntoMap
     @ViewModelKey(CurrentStatusVM::class)
     internal abstract fun bindCurrentStatusVM(viewModel: CurrentStatusVM): ViewModel
+
+    @Binds
+    @IntoMap
+    @ViewModelKey(UpdateStatusVM::class)
+    internal abstract fun bindUpdateStatusVM(viewModel: UpdateStatusVM): ViewModel
 
     @Binds
     internal abstract fun bindViewModelFactory(factory: ViewModelFactory): ViewModelProvider.Factory
