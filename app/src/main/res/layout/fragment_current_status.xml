@@ -18,7 +18,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                app:layout_constraintGuide_percent="0.65" />
+                app:layout_constraintGuide_percent="0.5" />
 
         <android.support.constraint.Guideline
                 android:id="@+id/gd_left"
@@ -54,6 +54,19 @@
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/gd_center" />
+
+        <TextView
+                android:id="@+id/tv_success_message"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="monospace"
+                android:layout_marginTop="16dp"
+                android:gravity="center"
+                android:text="Bu uygulama sayesinde yakınınızda bulunan yardım ekipmanlarını görebilir, kendi durumunuzu da güncelleyerek size yardım edilmesini sağlayabilirsiniz."
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_success" />
 
         <Button
                 android:id="@+id/bt_message"
