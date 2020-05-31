@@ -23,12 +23,12 @@ data class PersonInfo constructor(
 
 }
 
-enum class Status(val value: Int) {
-    Guvende(1),
-    ZorDurumda(2),
-    GidaIhtiyaci(4),
-    BezIhtiyaci(8),
-    CadirIhtiyaci(16),
-    EnkazAltindayim(32),
-    KomsumdanSesGeliyor(64);
+enum class Status(val value: Int, val description:String) {
+    Guvende(1, "Güvendeyim"),
+    ZorDurumda(2, "Zor durumdayım"),
+    GidaIhtiyaci(4, "Gıda ihtiyacım var"),
+    BezIhtiyaci(8, "Bez ihtiyacım var"),
+    CadirIhtiyaci(16, "Çadır ihtiyacım var"),
+    EnkazAltindayim(32, "Enkaz altındayım"),
+    KomsumdanSesGeliyor(64, "Komşumdan ses geliyor");
 }

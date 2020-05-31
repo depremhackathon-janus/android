@@ -28,7 +28,6 @@ class UpdateStatusActivityFragment : BaseFragment<UpdateStatusVM, FragmentUpdate
             )
                 .withSelectionPredicate(Predicate())
                 .build()
-
         }
     }
 }
