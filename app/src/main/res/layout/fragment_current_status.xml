@@ -74,7 +74,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:background="@null"
-                android:drawableTop="@drawable/ic_coffee_cup"
+                android:drawableTop="@drawable/ic_comment"
                 android:fontFamily="monospace"
                 android:lines="2"
                 android:onClick="@{vm::performUpdateStatus}"
