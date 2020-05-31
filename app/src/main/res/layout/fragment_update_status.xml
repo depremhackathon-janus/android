@@ -46,7 +46,7 @@
                 android:drawableStart="@drawable/ic_warning"
                 android:drawablePadding="16dp"
                 android:fontFamily="monospace"
-                android:onClick="@{vm::performMap}"
+                android:onClick="@{vm::performUpdate}"
                 android:text="Durumumu Guncelle"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintLeft_toLeftOf="parent"

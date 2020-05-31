@@ -27,7 +27,15 @@ class UpdateStatusActivityFragment : BaseFragment<UpdateStatusVM, FragmentUpdate
                 StorageStrategy.createLongStorage()
             )
                 .withSelectionPredicate(Predicate())
-                .build()
+                .build().also {
+                    it.addObserver(
+                        object : SelectionTracker.SelectionObserver<Long>() {
+                            override fun onSelectionChanged() {
+                                viewModel.updateSelection(it.selection)
+                            }
+                        }
+                    )
+                }
         }
     }
 }
