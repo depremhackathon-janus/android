@@ -23,7 +23,7 @@ To clone and run this application, you'll need [Git](https://git-scm.com) and [A
 
 ```bash
 # Clone this repository
-$ git clone https://github.com/JANUS-mbt/pme_android.git
+$ git clone https://github.com/depremhackathon-janus/android.git
 
 # Open project using Android Studio
 # Build and Run
