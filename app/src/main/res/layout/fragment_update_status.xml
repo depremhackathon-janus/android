@@ -80,7 +80,7 @@
                 android:fontFamily="monospace"
                 android:textAllCaps="false"
                 android:onClick="@{vm::performUpdate}"
-                android:text="Durumumu Guncelle"
+                android:text="Durumumu Güncelle"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent" />
