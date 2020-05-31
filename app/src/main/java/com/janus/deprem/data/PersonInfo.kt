@@ -17,7 +17,7 @@ data class PersonInfo constructor(
         obj.put("stat", status)
         obj.put("long", longitude)
         obj.put("lat", latitude)
-        obj.put("txt", txt)
+        obj.put("txt", txt.trim())
         return obj
     }
 

@@ -31,7 +31,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".ui.choose.ChooseActivity" />
-        <activity android:name=".ui.updatestatus.UpdateStatusActivity" />
+        <activity
+                android:name=".ui.updatestatus.UpdateStatusActivity"
+                android:windowSoftInputMode="adjustPan" />
     </application>
 
 </manifest>

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto">
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
 
     <data>
 
@@ -35,16 +36,49 @@
                 android:clipToPadding="false"
                 android:orientation="vertical"
                 app:layoutManager="android.support.v7.widget.LinearLayoutManager"
-                app:layout_constraintBottom_toTopOf="@id/bt_send"
-                app:layout_constraintTop_toBottomOf="@id/tv_success" />
+                app:layout_constraintBottom_toTopOf="@id/cv_item"
+                app:layout_constraintTop_toBottomOf="@id/tv_success"
+                tools:listitem="@layout/item_status" />
+
+        <android.support.v7.widget.CardView
+                android:id="@+id/cv_item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="@dimen/base_margin"
+                app:cardElevation="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="16dp"
+                android:layout_marginStart="@dimen/base_margin"
+                android:layout_marginEnd="@dimen/base_margin"
+                app:contentPadding="@dimen/base_margin"
+                app:layout_constraintBottom_toTopOf="@id/bt_send">
+
+            <EditText
+                    android:id="@+id/et_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="monospace"
+                    android:gravity="top"
+                    android:text="@={vm.txt}"
+                    android:lines="5"
+                    android:background="@null"
+                    android:imeOptions="actionDone"
+                    android:hint="Belittmek istediğiniz durumları burada belirtebilirsiniz."
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    />
+
+        </android.support.v7.widget.CardView>
 
         <Button
                 android:id="@+id/bt_send"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@null"
+                android:layout_margin="16dp"
+                android:background="@drawable/bt_rounded"
                 android:drawableStart="@drawable/ic_warning"
                 android:drawablePadding="16dp"
+                android:textColor="@android:color/white"
+                android:padding="@dimen/base_margin"
                 android:fontFamily="monospace"
                 android:onClick="@{vm::performUpdate}"
                 android:text="Durumumu Guncelle"
