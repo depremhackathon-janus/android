@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools" xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+                name="vm"
+                type="com.janus.deprem.vm.ChooseVM"/>
+        <import type="com.janus.deprem.util.Status"/>
+        <import type="android.view.View"/>
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <android.support.constraint.Guideline
+                android:id="@+id/gd_bottom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.9"
+        />
+        <android.support.constraint.Guideline
+                android:id="@+id/gd_left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.2"
+        />
+        <android.support.constraint.Guideline
+                android:id="@+id/gd_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.8"
+        />
+        <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:visibility="@{vm.status==Status.IN_PROGRESS?View.VISIBLE:View.GONE}"
+        />
+
+        <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+                  xmlns:tools="http://schemas.android.com/tools"
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:id="@+id/map_fragment"
+                  android:fontFamily="monospace"
+                  android:name="com.google.android.gms.maps.SupportMapFragment"
+        />
+        <Button
+                android:id="@+id/bt_signin"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/find_optimal_route"
+                android:onClick="@{vm::performRoute}"
+                android:textColor="@color/textColorLight"
+                android:enabled="@{vm.position!=null}"
+                app:layout_constraintBottom_toBottomOf="@id/gd_bottom"
+                android:background="@drawable/bt_rounded"
+                android:fontFamily="monospace"
+                app:layout_constraintLeft_toLeftOf="@id/gd_left"
+                app:layout_constraintRight_toRightOf="@id/gd_right"
+        />
+        <android.support.constraint.Group
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:constraint_referenced_ids="map_fragment"
+                android:visibility="@{vm.status==Status.IN_PROGRESS?View.GONE:View.VISIBLE}"
+        />
+    </android.support.constraint.ConstraintLayout>
+</layout>
