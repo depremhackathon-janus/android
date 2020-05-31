@@ -40,7 +40,7 @@ Here is our team members for this hackathon
 - [Ahmet Zorer](https://github.com/ahmetcj4)
 - [Ferhat Melih Dal](https://github.com/ferhatmelih)
 - [Ufuk Serkan Yıldırım](https://github.com/ozanbulut)
-- [Halil Samet Çıldır](https://github.com/tunahansalih)
+- [Halil Samet Çıldır](https://github.com/samedcildir)
 
 ## Links
 - [Hackathon](https://depremhackathonu.ibb.istanbul/)
