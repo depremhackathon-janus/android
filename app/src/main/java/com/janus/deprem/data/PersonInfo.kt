@@ -15,15 +15,15 @@ data class PersonInfo constructor(
         val obj = JSONObject()
         obj.put("num", number)
         obj.put("stat", status)
-        obj.put("long", longitude.toDouble())
-        obj.put("lat", latitude.toDouble())
+        obj.put("long", longitude)
+        obj.put("lat", latitude)
         obj.put("txt", txt)
         return obj
     }
 
 }
 
-enum class Status(val value: Int, val description:String) {
+enum class Status(val value: Int, val description: String) {
     Guvende(1, "Güvendeyim"),
     ZorDurumda(2, "Zor durumdayım"),
     GidaIhtiyaci(4, "Gıda ihtiyacım var"),
