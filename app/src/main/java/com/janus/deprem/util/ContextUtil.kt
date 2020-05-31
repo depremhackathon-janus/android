@@ -49,8 +49,8 @@ fun Context.startNavigation(latLng: LatLng): Boolean {
 
 fun Context.sendSMS(personInfo: PersonInfo) {
     try {
-        val smsManager: SmsManager = SmsManager.getDefault()
-        smsManager.sendTextMessage("+12029329036", null, personInfo.toJson().toString(), null, null)
+        val personInfoString = personInfo.toJson().toString()
+        SmsManager.getDefault().sendTextMessage("+12029329036", null, personInfoString, null, null)
         Toast.makeText(this, "Durumunuz Bildirildi", Toast.LENGTH_LONG).show()
     } catch (ex: Exception) {
         Toast.makeText(this, ex.message.toString(), Toast.LENGTH_LONG).show()
