@@ -32,7 +32,7 @@ $ git clone https://github.com/depremhackathon-janus/android.git
 
 ### Passing Tests
 <p align="center">
-  <img src="https://github.com/depremhackathon-janus/android/blob/master/Screen%20Shot%202018-12-02%20at%2012.24.52.png" alt="Screenshot"/>
+  <img src="https://github.com/depremhackathon-janus/android/blob/master/ss.png" alt="Screenshot"/>
 </p>
 
 ## Our Team
