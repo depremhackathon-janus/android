@@ -6,8 +6,8 @@ import org.json.JSONObject
 data class PersonInfo constructor(
     var number: Long,
     var status: Int,
-    var longitude: Float = 45.56f,
-    var latitude: Float = 36.09f,
+    var longitude: Float = 28.97f,
+    var latitude: Float = 41.01f,
     var txt: String = ""
 ) {
     @Throws(JSONException::class)
